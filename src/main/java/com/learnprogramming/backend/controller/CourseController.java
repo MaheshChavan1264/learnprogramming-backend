@@ -15,7 +15,7 @@ import com.learnprogramming.backend.model.Course;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/lp/")
 public class CourseController {
 
