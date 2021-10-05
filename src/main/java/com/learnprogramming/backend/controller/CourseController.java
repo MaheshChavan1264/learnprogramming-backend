@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +37,7 @@ public class CourseController {
 	}
 	
 	//delete the course by using id
-	@PostMapping("/courses/{id}")
+	@DeleteMapping("/courses/{id}")
 	public void deleteCourse(@PathVariable int id){
 		courseRepository.deleteById((long) id);
 	}
