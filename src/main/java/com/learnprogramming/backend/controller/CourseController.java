@@ -40,6 +40,6 @@ public class CourseController {
 	//delete the course by using id
 	@DeleteMapping("/courses/{id}")
 	public void deleteCourse(@PathVariable int id){
-		courseRepository.deleteById((long) id);
+		coursesRepository.deleteById((long) id);
 	}
 }
