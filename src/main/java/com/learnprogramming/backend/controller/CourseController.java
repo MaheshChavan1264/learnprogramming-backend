@@ -34,4 +34,10 @@ public class CourseController {
 		System.out.println(course);
 		return coursesRepository.save(course);
 	}
+	
+	//delete the course by using id
+	@PostMapping("/courses/{id}")
+	public void deleteCourse(@PathVariable int id){
+		courseRepository.deleteById((long) id);
+	}
 }
